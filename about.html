@@ -8,6 +8,298 @@
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="index.css">
     <style>
+         *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: black;
+}
+.container1{
+    color:white;
+    height:100vh;
+    width: 100vw;
+    background-image: url(asset/background.jpg);
+}
+.nav{
+    color:black;
+    position: fixed;
+    height: 10%;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    padding:8px 5% 5px 2%;
+    border-bottom: 2px solid green;
+    background-color: rgb(249, 249, 244);
+}
+.brand{
+    margin:auto;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    height: 100%;
+    
+}
+.logoimage{
+    height: 55px;
+    width:60px;
+    border:2px solid green;
+    border-radius: 50px;
+}
+.logoimage:hover{
+    transform: scale(1.2);
+}
+.brandname{
+    font-size: 40px;
+    margin: auto;
+    font-weight: bold;
+}
+
+.cards-1{
+    height:80%;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap:wrap;
+
+}
+.featurecard{
+    margin-top:80px;
+    color: black;
+    height: 400px;
+    width: 550px; 
+    background-color:rgb(249, 249, 244);
+    border: 2px solid white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    box-shadow: 5px 5px  5px rgba(247, 210, 163, 0.523);
+}
+.smallcards{
+    margin-top:20pxpx;
+    height: 400px;
+    width: 550px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+}
+.infoform{
+    margin-left:15px;
+    color:rgb(22, 22, 251);
+    border-bottom: 2px solid black;
+    padding:4px 5px 4px 12px;
+    font-weight:bold;
+}
+.ownername{
+    margin-left:15px;
+    display:flex
+}
+#ownername{
+    border:2px solid black;
+    width:150px;
+    padding:10px;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+}
+.input1{
+    padding:10px;
+    border: 2px solid black;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+    width:65%;
+}
+.vehiclename{
+    margin-left:15px;
+    display:flex
+}
+#vehiclename{
+    border:2px solid black;
+    width:150px;
+    padding:10px;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+}
+.input2{
+    padding:10px;
+    border: 2px solid black;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+    width:65%;
+}
+.vehiclenumber{
+    margin-left:15px;
+    display:flex
+}
+#vehiclenumber{
+    border:2px solid black;
+    width:150px;
+    padding:10px;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+}
+.input3{
+    padding:10px;
+    border: 2px solid black;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+    width:65%;
+}
+.entrydate{
+    margin-left:15px;
+    display:flex
+}
+#entrydate{
+    border:2px solid black;
+    width:150px;
+    padding:10px;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+}
+.input4{
+    padding:10px;
+    border: 2px solid black;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+    width:65%;
+}
+.exitdate{
+    margin-left:15px;
+    display:flex
+}
+#exitdate{
+    border:2px solid black;
+    width:150px;
+    padding:10px;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+}
+.input5{
+    padding:10px;
+    border: 2px solid black;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+    width:65%;
+}
+.submit{
+    margin-left:15px;
+    border:2px solid rgba(0, 0, 0, 0.176);
+    border-radius: 8px;
+    width:120px;
+    padding:10px;
+    background-color: rgb(251, 251, 93);
+}
+.submit:hover{
+    transform: scale(1.1);
+}
+.scard1,.scard2{
+ color: black;
+ display: flex;
+ border:2px solid white;
+ border-radius:8px;
+ padding:10px;
+ width:80%;
+ background-color: rgb(249, 249, 244);
+ box-shadow: 5px 5px  5px rgba(247, 210, 163, 0.523);
+}
+.scard1:hover,.scard2:hover{
+    transform: scale(1.1);
+}
+form{
+    
+    color: black;
+    height: 350px;
+    width: 550px; 
+    background-color:rgb(249, 249, 244);
+    border: 2px solid white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    box-shadow: 5px 5px  5px rgba(247, 210, 163, 0.523);
+}
+.container2{
+    color: black;
+    height:50vh;
+    width:100vw;
+    background-color:rgb(249, 249, 244) ;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+}
+.record{
+    padding:10px;
+    border: 2px solid black;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+    width:65%;
+    margin:15px;
+}
+.search{
+    width:70%;
+    margin:15px;
+}
+#search,#text{
+    padding:10px;
+    border: 2px solid black;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+}
+#search{
+    width:10%;
+    
+}
+#text{
+    width:90%;
+}
+th{
+    padding:0px 60px 0px 60px;
+}
+td{
+    background-color: rgba(0, 0, 0, 0.076);
+    padding:5px 60px 5px 60px;
+}
+.container3{
+    margin-top: 20px;
+    height: 40vh;
+    width:100vw;
+    background-image: url(asset/background.jpg);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    color:white;
+}
+.container3>a{
+    color:white;
+    text-decoration: none;
+}
+.container3>a:hover{
+    text-decoration: underline;
+}
+.contact{
+    color:white
+}
+.copyright{
+    border-top: 2px solid white;
+    color: white;
+    height:30px;
+    width:300px;
+    padding:5px;
+}
         .container1{
             height:30vh;
         }
