@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Lot Management</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="asset/logo.jpg" type="image/x-icon">
+    <script src="index.js"></script>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: black;
+}
+.container1{
+    color:white;
+    height:100vh;
+    width: 100vw;
+    background-image: url(asset/background.jpg);
+}
+.nav{
+    color:black;
+    position: fixed;
+    height: 10%;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    padding:8px 5% 5px 2%;
+    border-bottom: 2px solid green;
+    background-color: rgb(249, 249, 244);
+}
+.brand{
+    margin:auto;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    height: 100%;
+    
+}
+.logoimage{
+    height: 55px;
+    width:60px;
+    border:2px solid green;
+    border-radius: 50px;
+}
+.logoimage:hover{
+    transform: scale(1.2);
+}
+.brandname{
+    font-size: 40px;
+    margin: auto;
+    font-weight: bold;
+}
+
+.cards-1{
+    height:80%;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap:wrap;
+
+}
+.featurecard{
+    margin-top:80px;
+    color: black;
+    height: 400px;
+    width: 550px; 
+    background-color:rgb(249, 249, 244);
+    border: 2px solid white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    box-shadow: 5px 5px  5px rgba(247, 210, 163, 0.523);
+}
+.smallcards{
+    margin-top:20pxpx;
+    height: 400px;
+    width: 550px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+}
+.infoform{
+    margin-left:15px;
+    color:rgb(22, 22, 251);
+    border-bottom: 2px solid black;
+    padding:4px 5px 4px 12px;
+    font-weight:bold;
+}
+.ownername{
+    margin-left:15px;
+    display:flex
+}
+#ownername{
+    border:2px solid black;
+    width:150px;
+    padding:10px;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+}
+.input1{
+    padding:10px;
+    border: 2px solid black;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+    width:65%;
+}
+.vehiclename{
+    margin-left:15px;
+    display:flex
+}
+#vehiclename{
+    border:2px solid black;
+    width:150px;
+    padding:10px;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+}
+.input2{
+    padding:10px;
+    border: 2px solid black;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+    width:65%;
+}
+.vehiclenumber{
+    margin-left:15px;
+    display:flex
+}
+#vehiclenumber{
+    border:2px solid black;
+    width:150px;
+    padding:10px;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+}
+.input3{
+    padding:10px;
+    border: 2px solid black;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+    width:65%;
+}
+.entrydate{
+    margin-left:15px;
+    display:flex
+}
+#entrydate{
+    border:2px solid black;
+    width:150px;
+    padding:10px;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+}
+.input4{
+    padding:10px;
+    border: 2px solid black;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+    width:65%;
+}
+.exitdate{
+    margin-left:15px;
+    display:flex
+}
+#exitdate{
+    border:2px solid black;
+    width:150px;
+    padding:10px;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+}
+.input5{
+    padding:10px;
+    border: 2px solid black;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+    width:65%;
+}
+.submit{
+    margin-left:15px;
+    border:2px solid rgba(0, 0, 0, 0.176);
+    border-radius: 8px;
+    width:120px;
+    padding:10px;
+    background-color: rgb(251, 251, 93);
+}
+.submit:hover{
+    transform: scale(1.1);
+}
+.scard1,.scard2{
+ color: black;
+ display: flex;
+ border:2px solid white;
+ border-radius:8px;
+ padding:10px;
+ width:80%;
+ background-color: rgb(249, 249, 244);
+ box-shadow: 5px 5px  5px rgba(247, 210, 163, 0.523);
+}
+.scard1:hover,.scard2:hover{
+    transform: scale(1.1);
+}
+form{
+    
+    color: black;
+    height: 350px;
+    width: 550px; 
+    background-color:rgb(249, 249, 244);
+    border: 2px solid white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    box-shadow: 5px 5px  5px rgba(247, 210, 163, 0.523);
+}
+.container2{
+    color: black;
+    height:50vh;
+    width:100vw;
+    background-color:rgb(249, 249, 244) ;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+}
+.record{
+    padding:10px;
+    border: 2px solid black;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+    width:65%;
+    margin:15px;
+}
+.search{
+    width:70%;
+    margin:15px;
+}
+#search,#text{
+    padding:10px;
+    border: 2px solid black;
+    border-radius:8px ;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.508);
+}
+#search{
+    width:10%;
+    
+}
+#text{
+    width:90%;
+}
+th{
+    padding:0px 60px 0px 60px;
+}
+td{
+    background-color: rgba(0, 0, 0, 0.076);
+    padding:5px 60px 5px 60px;
+}
+.container3{
+    margin-top: 20px;
+    height: 40vh;
+    width:100vw;
+    background-image: url(asset/background.jpg);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    color:white;
+}
+.container3>a{
+    color:white;
+    text-decoration: none;
+}
+.container3>a:hover{
+    text-decoration: underline;
+}
+.contact{
+    color:white
+}
+.copyright{
+    border-top: 2px solid white;
+    color: white;
+    height:30px;
+    width:300px;
+    padding:5px;
+}
+    </style>
+</head>
+<body>
+    
+    <div class="container1">
+        <div class="nav">
+            <div class="brand">
+                <div class="logo">
+                    <img src="asset/logo.jpg" alt="#" class="logoimage">
+                </div>
+                <div class="brandname">PARKING LOT MANAGEMENT</div>
+            </div>
+                
+                
+            </div>
+       
+        <div class="cards-1">
+            <div class="featurecard">
+                <h2 class="infoform">Information Form </h2>
+                <!-- <form > -->
+
+                <div class="ownername">
+                <div id="ownername">Owner Name</div>
+                <input type="text" placeholder="Enter your name here" class="input1" id="input1"></div>
+                <div class="vehiclename">
+                    <div id="vehiclename">Vehicle Name</div>
+                    <input type="text" placeholder="Enter Vehicle name" class="input2" id="input2"></div>
+                    <div class="vehiclenumber">
+                        <div id="vehiclenumber">Vehicle Number</div>
+                        <input type="text" placeholder="Enter Vehicle number" class="input3" id="input3"></div>
+                        <div class="entrydate">
+                            <div id="entrydate">Entry Date</div>
+                            <input type="date"  class="input4" id="input4"></div>
+                            <div class="exitdate">
+                                <div id="exitdate">Exit Date</div>
+                                <input type="date"  class="input5" id="input5"></div>
+                         <!-- <input type="submit" name="submit" class="submit" onclick="click()"> -->
+                         <button class="submit" id="submit" onclick="createTable()">Submit</button>
+<!-- 
+                        </form> -->
+                        
+            </div>
+            <div class="smallcards">
+                <h1> Made Parking Management Easy
+                </h1>
+                <div class="scard1">
+                    <h3>Say goodbye to manual Parking Management</h3>
+                </div>
+                <div class="scard2">
+                    <h3>Your one-stop Parking Management solution</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="record">All Vehicle Record</div>
+        <div class="search"></div>
+            <!-- <input type="text" id="text" class="form-control" placeholder="Search Vehicle Detail" onkeyup="search()"> -->
+            <input type="text" id="text" class="form-control" placeholder="                                                                                                                                                      Search  by Vehicle Number"  >
+            <br>
+            <button id="search" onclick="search()" ondblclick="createTable()">Search</button>
+
+            <table id="searchTable">
+                <thead>
+            <tr>
+            </tbody>
+            </table>
+      <br>
+       <table class="table" id="table">
+        <thead>
+            <tr>
+                <th>Owner Name</th>
+                <th>Vehicle Name</th>
+                <th>Vehicle Number</th>
+                <th>Entry Date</th>
+                <th>Exit Date</th>
+                <th>Delete Record</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr>
+                <td id="oname1"></td>
+                <td id="vname1"></td>
+                <td id="vnum1"></td>
+                <td id="entrydate1"></td>
+                <td id="exitdate1"></td>
+                <td id="Delete"><button onclick="deleteRow(this)">Delete</button></td>
+               </tr> -->
+        </tbody>
+       </table>
+    </div>
+
+    <div class="container3">
+        <a href="about.html">ABOUT</a>
+        <a href="index.html">HOME</a>
+        <p >CONTACT</p>
+        <div class="contact" id="contact">
+            Customer Service: +91 7456889172 
+            <br>
+            Email: parkingmanagement@gmail.com
+            <br>
+            Address: GNIOT, Knowledge Park 2 , Greater Noida , U.P
+        </div>
+        <div class="copyright"> &#169 Parked - All Rights Reserved. </div>
+    </div>
+</body>
+<script>
+  var i=0;
+var onamearray=new Array();
+var vnamearray=new Array();
+var vnumarray=new Array();
+var entryarray=new Array();
+var exitarray=new Array();
+
+function createTable() {
+  var table = document.getElementById("table");
+  var row = table.insertRow();
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+  var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
+        var cell6 = row.insertCell(5);
+
+var data1=document.getElementById("input1").value;
+var data2=document.getElementById("input2").value;
+var data3=document.getElementById("input3").value;
+var data4=document.getElementById("input4").value;
+var data5=document.getElementById("input5").value;
+
+cell1.innerHTML= data1;
+        cell2.innerHTML = data2;
+        cell3.innerHTML = data3;
+        cell4.innerHTML = data4;
+        cell5.innerHTML=  data5;
+        cell6.innerHTML = '<button onclick="deleteRow(this)">Delete</button>';
+   
+onamearray[i]=data1;
+vnamearray[i]=data2;
+vnumarray[i]=data3;
+entryarray[i]=data4;
+exitarray[i]=data5;
+i=i+1;
+        
+}
+function deleteRow(button) {
+  var row = button.parentNode.parentNode;
+  row.parentNode.removeChild(row);
+}
+
+
+function search(){
+ var vehicledetail=document.getElementById("text").value;
+ var index= vnumarray.indexOf(vehicledetail);
+
+ var table = document.getElementById("searchTable");
+  var row = table.insertRow();
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  var cell4 = row.insertCell(3);
+  var cell5 = row.insertCell(4);
+  var cell6 = row.insertCell(5);
+
+        cell1.innerHTML= onamearray[index];
+        cell2.innerHTML =vnamearray[index];
+        cell3.innerHTML = vnumarray[index];
+        cell4.innerHTML = entryarray[index];
+        cell5.innerHTML= exitarray[index];
+        cell6.innerHTML = '<button onclick="deleteRow(this)">Delete</button>';}  
+</script>
+</html>
